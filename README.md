@@ -24,6 +24,9 @@ Open any of the notebooks listed above in the browser.
   
 ## Contents  
   
+### common.ipynb  
+Contains common utilities and helper functions used across the notebooks.  
+  
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
