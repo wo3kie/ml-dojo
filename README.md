@@ -24,6 +24,9 @@ Open any of the notebooks listed above in the browser.
   
 ## Contents  
   
+### functions.ipynb  
+Explore various PyTorch functions.  
+  
 ### tensor.ipynb  
 Demonstrate how to create and manipulate tensors in PyTorch, including basic operations, indexing, and reshaping.  
   
