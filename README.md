@@ -42,6 +42,10 @@ Demonstrate how to solve linear regression in one dimension using the closed-for
 ### lin_reg_1D_normal_equation.ipynb  
 Demonstrate how to solve linear regression in one dimension using the normal equation.
   
+### lin_reg_ND_sgd_gradient.ipynb  
+Demonstrate how to solve linear regression in many dimensions using stochastic gradient descent (SGD),
+and derive the gradients for weights and bias manually.  
+  
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
