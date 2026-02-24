@@ -26,7 +26,10 @@ Open any of the notebooks listed above in the browser.
   
 ### common.ipynb  
 Contains common utilities and helper functions used across the notebooks.  
-    
+  
+### cross_entropy.ipynb  
+Explore the concept of cross-entropy and how it relates to entropy and optimal coding.
+  
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
