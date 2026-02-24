@@ -26,9 +26,12 @@ Open any of the notebooks listed above in the browser.
   
 ### common.ipynb  
 Contains common utilities and helper functions used across the notebooks.  
-  
+    
 ### functions.ipynb  
 Explore various PyTorch functions.  
+  
+### probability.ipynb  
+Demonstrate how to calculate probabilities and conditional probabilities.  
   
 ### tensor.ipynb  
 Demonstrate how to create and manipulate tensors in PyTorch, including basic operations, indexing, and reshaping.  
