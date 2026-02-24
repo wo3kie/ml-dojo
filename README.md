@@ -39,6 +39,9 @@ Explore various PyTorch functions.
 ### lin_reg_1D_closed_form.ipynb  
 Demonstrate how to solve linear regression in one dimension using the closed-form solution.
   
+### lin_reg_1D_normal_equation.ipynb  
+Demonstrate how to solve linear regression in one dimension using the normal equation.
+  
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
