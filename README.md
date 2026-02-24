@@ -30,6 +30,9 @@ Contains common utilities and helper functions used across the notebooks.
 ### cross_entropy.ipynb  
 Explore the concept of cross-entropy and how it relates to entropy and optimal coding.
   
+### entropy.ipynb  
+Explore the concept of entropy, its properties, and how it can be calculated for different distributions.  
+  
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
