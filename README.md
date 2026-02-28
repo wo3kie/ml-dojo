@@ -61,6 +61,9 @@ and derive the gradients for weights and bias manually.
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
+### sigmoid.ipynb  
+Explore the sigmoid function, its properties, and implement its overflow resistant version.  
+  
 ### tensor.ipynb  
 Demonstrate how to create and manipulate tensors in PyTorch, including basic operations, indexing, and reshaping.  
   
