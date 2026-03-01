@@ -50,12 +50,12 @@ and derive the gradients for weights and bias manually.
 Demonstrate how to solve linear regression in many dimensions using stochastic gradient descent (SGD),
 and use PyTorch's autograd to compute the gradients for weights and bias.
   
-### log_reg_ND_sgd_autograd.ipynb  
-Demonstrate how to solve logistic regression in many dimensions using stochastic gradient descent (SGD),
+### log_reg_2C_sgd_autograd.ipynb  
+Demonstrate how to solve logistic regression for two classes using stochastic gradient descent (SGD),
 and use PyTorch's autograd to compute the gradients for weights and bias.
   
-### log_reg_ND_sgd_gradient.ipynb  
-Demonstrate how to solve logistic regression in many dimensions using stochastic gradient descent (SGD),
+### log_reg_2C_sgd_gradient.ipynb  
+Demonstrate how to solve logistic regression for two classes using stochastic gradient descent (SGD),
 and derive the gradients for weights and bias manually.  
   
 ### probability.ipynb  
