@@ -2,6 +2,7 @@
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
+from torch import Tensor
 
 def _sigmoid_f_neg(x: float) -> float: ...
 def _sigmoid_f_pos(x: float) -> float: ...
