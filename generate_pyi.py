@@ -74,6 +74,7 @@ def generate_pyi_file(notebook_path: str, output_dir: str = None) -> str:
     
     # Add imports that are commonly needed
     lines.append("from typing import Any, Callable, Iterable, List, Optional, Tuple, Union")
+    lines.append("from torch import Tensor")
     lines.append("")
     
     # Add function signatures
