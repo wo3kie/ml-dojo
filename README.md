@@ -58,6 +58,12 @@ and use PyTorch's autograd to compute the gradients for weights and bias.
 Demonstrate how to solve logistic regression for two classes using stochastic gradient descent (SGD),
 and derive the gradients for weights and bias manually.  
   
+### newton_1D.ipynb  
+Demonstrate how to use Newton's method to find extrema of a single-variable function using first and second derivatives.  
+  
+### newton_ND.ipynb  
+Demonstrate how to use Newton's method to find extrema of a multivariate function using gradient and Hessian.  
+  
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
