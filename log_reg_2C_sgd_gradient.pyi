@@ -1,7 +1,8 @@
-# Stub file for log_reg_ND_sgd_gradient.ipynb
+# Stub file for log_reg_2C_sgd_gradient.ipynb
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
+from torch import Tensor
 
 def _Linear(X: Tensor, w: Tensor, b: Tensor) -> Tensor: ...
 def _Model(X: Tensor, w: Tensor, b: Tensor) -> Tensor: ...
