@@ -62,7 +62,7 @@ and derive the gradients for weights and bias manually.
 Demonstrate how to solve logistic regression for multiple classes using stochastic gradient descent (SGD),
 and use PyTorch's autograd to compute the gradients for weights and bias.
   
-### log_reg_NC_sgd_mnist.ipynb  
+### mnist_log_reg_NC_sgd.ipynb  
 Demonstrate how to implement the Image Recognition task for the MNIST dataset using logistic regression for 
 multiple classes with stochastic gradient descent (SGD), performing all gradients calculations step-by-step manually.  
   
