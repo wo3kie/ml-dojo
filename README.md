@@ -66,6 +66,10 @@ and use PyTorch's autograd to compute the gradients for weights and bias.
 Demonstrate how to implement the Image Recognition task for the MNIST dataset using logistic regression for 
 multiple classes with stochastic gradient descent (SGD), performing all gradients calculations step-by-step manually.  
   
+### mnist_log_reg_NC_sgd_weights.ipynb  
+Demonstrate how to implement the Image Recognition task for the MNIST dataset using logistic regression for 
+multiple classes with stochastic gradient descent (SGD), and visualize the learned weights as images for each digit.
+  
 ### newton_1D.ipynb  
 Demonstrate how to use Newton's method to find extrema of a single-variable function using first and second derivatives.  
   
