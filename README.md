@@ -24,6 +24,9 @@ Open any of the notebooks listed above in the browser.
   
 ## Contents  
   
+### backward.ipynb  
+Demonstrate how to implement a custom autograd `backward` function in PyTorch on some examples.  
+  
 ### common.ipynb  
 Contains common utilities and helper functions used across the notebooks.  
   
