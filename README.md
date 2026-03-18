@@ -80,7 +80,7 @@ Demonstrate how to use Newton's method to find extrema of a single-variable func
 Demonstrate how to use Newton's method to find extrema of a multivariate function using gradient and Hessian.  
   
 ### perceptron_log.ipynb  
-Demonstrate how to implement a logistic perceptron, using linear model followed by a sigmoid for binary classification. Derive all `backward` functions manually.
+Demonstrate how to implement a logistic perceptron, using linear model followed by a sigmoid for binary classification. Derive all `backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
   
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
