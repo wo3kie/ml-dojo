@@ -39,6 +39,9 @@ Explore the concept of entropy, its properties, and how it can be calculated for
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
+### linear.ipynb  
+Explore the concept of linear function with its backward method and linear module.
+  
 ### lin_reg_1D_closed_form.ipynb  
 Demonstrate how to solve linear regression in one dimension using the closed-form solution.
   
