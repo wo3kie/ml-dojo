@@ -88,6 +88,9 @@ Demonstrate how to use Newton's method to find extrema of a multivariate functio
 ### perceptron_log.ipynb  
 Demonstrate how to implement a logistic perceptron, using linear model followed by a sigmoid for binary classification. Derive all `backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
   
+### perceptron_log_demo.ipynb  
+Demonstrate how to use the logistic perceptron implementation to learn boolean functions like AND, OR, NAND and XOR, and visualize the decision boundaries.
+  
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
