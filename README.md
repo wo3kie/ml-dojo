@@ -27,14 +27,11 @@ Open any of the notebooks listed above in the browser.
 ### backward.ipynb  
 Demonstrate how to implement a custom autograd `backward` function in PyTorch on some examples.  
   
-### binary_cross_entropy.ipynb  
-Demonstrate how to implement the binary cross-entropy loss function with a custom autograd `backward` function in PyTorch.
+### cross_entropy.ipynb / binary_cross_entropy.ipynb  
+Demonstrate how to implement the cross-entropy / binary cross-entropy loss function with a custom autograd `backward` function in PyTorch.
   
 ### common.ipynb  
 Contains common utilities and helper functions used across the notebooks.  
-  
-### cross_entropy.ipynb  
-Explore the concept of cross-entropy and how it relates to entropy and optimal coding.
   
 ### entropy.ipynb  
 Explore the concept of entropy, its properties, and how it can be calculated for different distributions.  
@@ -59,34 +56,30 @@ and derive the gradients for weights and bias manually.
 Demonstrate how to solve linear regression in many dimensions using stochastic gradient descent (SGD),
 and use PyTorch's autograd to compute the gradients for weights and bias.
   
-### log_reg_2C_sgd_autograd.ipynb  
-Demonstrate how to solve logistic regression for two classes using stochastic gradient descent (SGD),
+### log_reg_2C_sgd_autograd.ipynb / log_reg_NC_sgd_autograd.ipynb   
+Demonstrate how to solve logistic regression for two/multiple classes using stochastic gradient descent (SGD),
 and use PyTorch's autograd to compute the gradients for weights and bias.
   
-### log_reg_2C_sgd_gradient.ipynb  
-Demonstrate how to solve logistic regression for two classes using stochastic gradient descent (SGD),
+### log_reg_2C_sgd_gradient.ipynb / log_reg_NC_sgd_gradient.ipynb  
+Demonstrate how to solve logistic regression for two/multiple classes using stochastic gradient descent (SGD),
 and derive the gradients for weights and bias manually.  
-  
-### log_reg_NC_sgd_autograd.ipynb  
-Demonstrate how to solve logistic regression for multiple classes using stochastic gradient descent (SGD),
-and use PyTorch's autograd to compute the gradients for weights and bias.
-  
+    
 ### mnist_log_reg_NC_sgd.ipynb  
 Demonstrate how to implement the Image Recognition task for the MNIST dataset using logistic regression for 
 multiple classes with stochastic gradient descent (SGD), performing all gradients calculations step-by-step manually.  
   
-### mnist_log_reg_NC_sgd_weights.ipynb  
+### mnist_log_reg_NC_sgd_demo.ipynb  
 Demonstrate how to implement the Image Recognition task for the MNIST dataset using logistic regression for 
 multiple classes with stochastic gradient descent (SGD), and visualize the learned weights as images for each digit.
   
-### newton_1D.ipynb  
-Demonstrate how to use Newton's method to find extrema of a single-variable function using first and second derivatives.  
+### newton_1D.ipynb / newton_ND.ipynb   
+Demonstrate how to use Newton's method to find extrema of a single-variable/multivariate function using first and second derivatives.  
+    
+### per_lin_sig_bce_gradient.ipynb / per_lin_sig_bce_backward.ipynb  
+Demonstrate how to implement a perceptron using a linear model followed by a sigmoid for binary classification. Derive all `gradient`/`backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
   
-### newton_ND.ipynb  
-Demonstrate how to use Newton's method to find extrema of a multivariate function using gradient and Hessian.  
-  
-### perceptron_log.ipynb  
-Demonstrate how to implement a logistic perceptron, using linear model followed by a sigmoid for binary classification. Derive all `backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
+### per_lin_tanh_bce_gradient.ipynb / per_lin_tanh_bce_backward.ipynb  
+Demonstrate how to implement a perceptron using a linear model followed by a hyperbolic tangent for binary classification. Derive all `gradient`/`backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
   
 ### perceptron_log_demo.ipynb  
 Demonstrate how to use the logistic perceptron implementation to learn boolean functions like AND, OR, NAND and XOR, and visualize the decision boundaries.
@@ -94,11 +87,8 @@ Demonstrate how to use the logistic perceptron implementation to learn boolean f
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
-### sigmoid.ipynb  
-Explore the sigmoid function, its properties, and implement its overflow resistant version.  
-  
-### tanh.ipynb  
-Explore the hyperbolic tangent function, its properties, and implement its overflow resistant version.
+### sigmoid.ipynb / tanh.ipynb  
+Explore the sigmoid/tanh function, its properties, and implement its overflow resistant version.  
   
 ### tensor.ipynb  
 Demonstrate how to create and manipulate tensors in PyTorch, including basic operations, indexing, and reshaping.  
