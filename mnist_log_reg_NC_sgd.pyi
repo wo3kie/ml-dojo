@@ -1,5 +1,5 @@
-# Stub file for log_reg_NC_sgd_mnist.ipynb
+# Stub file for mnist_log_reg_NC_sgd.ipynb
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
+import torch as tr
