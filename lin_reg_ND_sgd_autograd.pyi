@@ -2,6 +2,6 @@
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
+import torch as tr
 
-def linear_regression_nd_sgd_autograd(X: Tensor, Y: Tensor, epochs=1000, lr=0.1) -> tuple[Tensor, Tensor, Tensor]: ...
+def linear_regression_nd_sgd_autograd(X: tr.Tensor, Y: tr.Tensor, epochs=1000, lr=0.1) -> tuple[tr.Tensor, tr.Tensor, tr.Tensor]: ...
