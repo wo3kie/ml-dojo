@@ -2,7 +2,7 @@
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
+import torch as tr
 
 def prob(iterable, cond: callable) -> float: ...
 def prob_or(iterable, cond1: callable, cond2: callable, *conds: callable) -> float: ...
