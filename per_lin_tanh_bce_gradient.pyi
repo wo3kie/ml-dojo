@@ -1,0 +1,5 @@
+# Stub file for per_lin_tanh_bce_gradient.ipynb
+# Auto-generated from notebook code cells
+
+from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
+import torch as tr
