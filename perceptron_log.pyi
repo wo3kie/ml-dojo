@@ -1,5 +1,0 @@
-# Stub file for perceptron_log.ipynb
-# Auto-generated from notebook code cells
-
-from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
