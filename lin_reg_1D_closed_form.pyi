@@ -2,6 +2,6 @@
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
+import torch as tr
 
-def linear_regression_1d_cf(X: Tensor, Y: Tensor) -> tuple[float, float]: ...
+def linear_regression_1d_cf(X: tr.Tensor, Y: tr.Tensor) -> tuple[float, float]: ...
