@@ -2,7 +2,7 @@
 # Auto-generated from notebook code cells
 
 from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-from torch import Tensor
+import torch as tr
 
 def newton_1d(f: callable, x0: float, epochs=20, atol=0.01) -> float: ...
-def pow2(x: Tensor) -> Tensor: ...
+def pow2(x: tr.Tensor) -> tr.Tensor: ...
