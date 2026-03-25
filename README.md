@@ -81,6 +81,9 @@ Demonstrate how to implement a perceptron using a linear model followed by a sig
 ### per_lin_tanh_bce_gradient.ipynb / per_lin_tanh_bce_backward.ipynb  
 Demonstrate how to implement a perceptron using a linear model followed by a hyperbolic tangent for binary classification. Derive all `gradient`/`backward` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.
   
+### per_lin_sig_lin_sig_bce.ipynb  
+Demonstrate how to implement a two-layer perceptron using linear models followed by sigmoid activations for binary classification. Derive all `gradient` functions manually. Test the implementation on boolean functions like AND, OR, NAND and XOR.  
+  
 ### perceptron_log_demo.ipynb  
 Demonstrate how to use the logistic perceptron implementation to learn boolean functions like AND, OR, NAND and XOR, and visualize the decision boundaries.
   
