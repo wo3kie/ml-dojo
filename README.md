@@ -39,6 +39,9 @@ Explore the concept of entropy, its properties, and how it can be calculated for
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
+### inner_product.ipynb  
+Explore the concept of inner product for vectors and matrices, and its properties.
+  
 ### linear.ipynb  
 Explore the concept of linear function with its backward method and linear module.
   
