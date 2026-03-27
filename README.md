@@ -39,6 +39,9 @@ Explore the concept of entropy, its properties, and how it can be calculated for
 ### functions.ipynb  
 Explore various PyTorch functions.  
   
+### gradient.ipynb  
+Explore the concept of gradient for scalar functions.
+  
 ### inner_product.ipynb  
 Explore the concept of inner product for vectors and matrices, and its properties.
   
