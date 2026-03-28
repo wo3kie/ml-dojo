@@ -1,9 +1,0 @@
-# Stub file for per_lin_demo.ipynb
-# Auto-generated from notebook code cells
-
-from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-import torch as tr
-
-def plot_boolean_function(title, bool_fn, *args): ...
-def learn_perceptron_xy(perceptron_type, x, y, epochs=500, lr=0.1): ...
-def learn_perceptron_boolean(perceptron_type, bool_fn, samples=100, epochs=500, lr=0.1): ...

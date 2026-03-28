@@ -1,9 +1,0 @@
-# Stub file for sigmoid.ipynb
-# Auto-generated from notebook code cells
-
-from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
-import torch as tr
-
-def _sigmoid_neg(x: tr.Tensor) -> tr.Tensor: ...
-def _sigmoid_pos(x: tr.Tensor) -> tr.Tensor: ...
-def sigmoid(x) -> tr.Tensor: ...
