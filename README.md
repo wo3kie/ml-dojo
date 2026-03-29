@@ -28,10 +28,10 @@ Open any of the notebooks listed above in the browser.
 Demonstrate how to implement a custom autograd `backward` function in PyTorch on some examples.  
   
 ### binary_cross_entropy.ipynb  
-Demonstrate how to implement the binary cross-entropy loss function with a custom autograd `backward` function in PyTorch.
+Demonstrate how to implement the `binary cross-entropy` loss function with a custom autograd backward function in PyTorch.
   
 ### cross_entropy.ipynb  
-Demonstrate how to implement the cross-entropy loss function with a custom autograd `backward` function in PyTorch.
+Demonstrate how to implement the cross-entropy loss function with a custom autograd backward function in PyTorch.
   
 ### common.ipynb  
 Contains common utilities and helper functions used across the notebooks.  
