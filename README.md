@@ -1,12 +1,17 @@
 ## Copyright (C) 2026 Łukasz Czerwiński
 
+![ML Dojo](ml-dojo-380x320.png)
+
 # ML-dojo
 
-Small collection of notebooks exploring Machine Learning using PyTorch library.
+### Do you want to learn how to learn?
+
+I wish to invite you for a journey, where the MNIST classifier is not the start but the end. 
+First we implement primitives, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... Each of them with _forward_ and _backward_ passes. All derivatives and gradient calculation will be derived by hand. Then we combine them as layers into perceptrons. From the simplies one, to the nonlinear at the end. And when all pieces are done, we will assemble them into a full _MNIST_ classifier - everything in _PyTorch_, but with much deeper exposition into mathematical details.
 
 ## Website
-https://github.com/wo3kie/ml-dojo
 
+https://github.com/wo3kie/ml-dojo
 
 ## Setup
 
@@ -34,7 +39,7 @@ Demonstrate how to implement the `binary cross-entropy` loss function with a cus
 Demonstrate how to implement the cross-entropy loss function with a custom autograd backward function in PyTorch.
   
 ### common.ipynb  
-Contains common utilities and helper functions used across the notebooks.  
+Contains common utilities and helper functions used acro_ss the notebooks.  
   
 ### entropy.ipynb  
 Explore the concept of entropy, its properties, and how it can be calculated for different distributions.  
