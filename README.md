@@ -54,6 +54,9 @@ Demonstrate how to use Newton's method to find extrema of a single-variable/mult
 ### per_lin_sig_bce.ipynb  
 Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Sigmoid` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients.
     
+### per_lin_tanh_bce.ipynb  
+Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Tanh` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients. Compare learning performance of the `Tanh` activation with the `Sigmoid` activation.
+  
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
