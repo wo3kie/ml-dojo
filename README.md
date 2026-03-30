@@ -1,6 +1,6 @@
 ## Copyright (C) 2026 Łukasz Czerwiński
 
-![ML Dojo](ml-dojo-380x320.png)
+![ML Dojo](ml-dojo-285x240.png)
 
 # ML-dojo
 
