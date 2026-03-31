@@ -4,10 +4,11 @@
 
 # ML-dojo
 
-### Do you want to learn how to learn?
+### Do you want to learn how to _learn_?
 
-I wish to invite you for a journey, where the MNIST classifier is not the start but the end. 
-First we implement primitives, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... Each of them with _forward_ and _backward_ passes. All derivatives and gradient calculation will be derived by hand. Then we combine them as layers into perceptrons. From the simplies one, to the nonlinear at the end. And when all pieces are done, we will assemble them into a full _MNIST_ classifier - everything in _PyTorch_, but with much deeper exposition into mathematical details.
+A collection of building blocks for understanding neural networks internals.
+  
+Each component, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... is implemented with explicit _forward_ and _backward_ passes. All derivatives are derived manually. These primitives are then composed into progressively richer perceptrons: from the simplest linear models to fully nonlinear architectures. Everything is written in PyTorch, but with deliberate exposure of the underlying mathematics, so that every transformation, derivative, and update is transparent.
 
 ## Website
 
@@ -29,6 +30,14 @@ Open any of the notebooks listed above in the browser.
   
 ## Contents  
   
+### approx.ipynb  
+Demonstrate how to implement an `approx` class for approximate equality comparison of floating-point numbers, with support for both absolute and relative tolerances, and customizable logging of failed comparisons.
+
+```engine=python
+assert 1.05 == approx(1.0, atol=0.1)
+assert 1.05 == approx(1.0, rtol=0.1)
+```
+
 ### backward.ipynb  
 Demonstrate how to implement a custom autograd `backward` function in PyTorch on some examples.  
   
