@@ -1,6 +1,6 @@
 ## Copyright (C) 2026 Łukasz Czerwiński
 
-![ML Dojo](ml-dojo-285x240.png)
+![ML Dojo](ml-dojo-200x300.png)
 
 # ML-dojo
 
@@ -8,7 +8,7 @@
 
 A collection of building blocks for understanding neural networks internals.
   
-Each component, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... is implemented with explicit _forward_ and _backward_ passes. All derivatives are derived manually. These primitives are then composed into progressively richer perceptrons: from the simplest linear models to fully nonlinear architectures. Everything is written in PyTorch, but with deliberate exposure of the underlying mathematics, so that every transformation, derivative, and update is transparent.
+Each component, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... is implemented with explicit _forward_ and _backward_ passes. All derivatives are derived manually. These primitives are then composed into progressively richer perceptrons: from the simplest linear models to fully nonlinear architectures. Everything is written in PyTorch, but with deliberate exposure of the underlying mathematics.
 
 ## Website
 
