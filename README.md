@@ -77,6 +77,9 @@ Demonstrate how to calculate probabilities and conditional probabilities.
 ### sigmoid.ipynb  
 Explore the sigmoid function, its properties, and implement its overflow resistant version.  
   
+### sign.ipynb  
+Implement the sign function, with its custom autograd backward function in PyTorch.
+
 ### tanh.ipynb  
 Explore the hyperbolic tangent function, its properties, and implement its overflow resistant version.  
     
