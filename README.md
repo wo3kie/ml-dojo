@@ -65,6 +65,9 @@ Explore the concept of linear function with its backward method and linear modul
 ### newton.ipynb  
 Demonstrate how to use Newton's method to find extrema of a single-variable/multivariate function using first and second derivatives.  
     
+### neuron.ipynb  
+Demonstrate how to implement a McCulloch-Pitts neuron using a `Linear` to the affine transform, a `Sign` activation for binary classification. Demonstrate how to use it for boolean logic operations.  
+  
 ### per_lin_sig_bce.ipynb  
 Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Sigmoid` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients.
     
