@@ -74,6 +74,9 @@ Demonstrate how to implement a perceptron using a `Linear` to the affine transfo
 ### per_lin_tanh_bce.ipynb  
 Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Tanh` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients. Compare learning performance of the `Tanh` activation with the `Sigmoid` activation.
   
+### ploss.ipynb  
+Demonstrate how to implement the `PLoss` loss function with a custom autograd backward function.
+
 ### probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
