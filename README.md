@@ -43,10 +43,7 @@ Explores how PyTorch’s _backward_ method defines gradient flow through custom 
   
 ## bce.ipynb  
 Binary cross‑entropy measures the divergence between a predicted probability 𝑝 and a true binary label 𝑡 ∈ {0, 1}, penalizing confident but incorrect predictions. The notebook implements BCE with a custom autograd backward function.
-  
-## cross_entropy.ipynb  
-Introduces cross‑entropy as a measure of discrepancy between a true distribution 𝑡 and a predicted distribution 𝑝. It quantifies how many “extra bits” are needed when encoding data from 𝑡 using a model that believes in 𝑝. The notebook compares cross‑entropy across geometric, uniform, and Zipf‑like distributions.
-  
+    
 ## common.ipynb  
 Utility functions and helpers shared across notebooks.  
   
