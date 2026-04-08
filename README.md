@@ -4,11 +4,11 @@
 
 # ML-dojo
 
-### Do you want to learn how to _learn_?
+## Do you want to learn how to _learn_?
 
-A collection of building blocks for understanding neural networks internals.
-  
-Each component, like _linear_, _sigmoid_, _tanh_, _relu_, _bce_... is implemented with explicit _forward_ and _backward_ passes. All derivatives are derived manually. These primitives are then composed into progressively richer perceptrons: from the simplest linear models to fully nonlinear architectures. Everything is written in PyTorch, but with deliberate exposure of the underlying mathematics.
+A curated collection of building blocks for understanding the internals of neural networks.
+
+Each component — such as linear, _sigmoid_, _tanh_, _relu_, _bce_ — is implemented with explicit forward and backward passes. All derivatives are derived manually. These primitives are then composed into progressively richer perceptrons: from the simplest linear models to fully nonlinear architectures. Everything is written in PyTorch, with deliberate exposure of the underlying mathematics.
 
 ## Website
 
@@ -16,7 +16,7 @@ https://github.com/wo3kie/ml-dojo
 
 ## Setup
 
-### Create a fresh venv
+## Create a fresh venv
 
 ```bash
 python3 -m venv env
@@ -30,62 +30,86 @@ Open any of the notebooks listed above in the browser.
   
 ## Contents  
   
-### approx.ipynb  
-Demonstrate how to implement an `approx` class for approximate equality comparison of floating-point numbers, with support for both absolute and relative tolerances, and customizable logging of failed comparisons.
+## approx.ipynb  
+Implement an `approx` utility for approximate equality comparison of floating-point numbers, supporting both absolute and relative tolerances, with optional logging of failed comparisons.
 
 ```engine=python
 assert 1.05 == approx(1.0, atol=0.1)
 assert 1.05 == approx(1.0, rtol=0.1)
 ```
 
-### backward.ipynb  
-Demonstrate how to implement a custom autograd `backward` function in PyTorch on some examples.  
+## backward.ipynb  
+Explores how PyTorch’s _backward_ method defines gradient flow through custom operations. The notebook shows how to manually implement a backward pass that receives the upstream gradient and returns gradients with respect to each input.
   
-### bce.ipynb  
-Demonstrate how to implement the `binary cross-entropy` loss function with a custom autograd backward function in PyTorch.
+## bce.ipynb  
+Binary cross‑entropy measures the divergence between a predicted probability 𝑝 and a true binary label 𝑡 ∈ {0, 1}, penalizing confident but incorrect predictions. The notebook implements BCE with a custom autograd backward function.
   
-### cross_entropy.ipynb  
-Demonstrate how to implement the cross-entropy loss function with a custom autograd backward function in PyTorch.
+## cross_entropy.ipynb  
+Introduces cross‑entropy as a measure of discrepancy between a true distribution 𝑡 and a predicted distribution 𝑝. It quantifies how many “extra bits” are needed when encoding data from 𝑡 using a model that believes in 𝑝. The notebook compares cross‑entropy across geometric, uniform, and Zipf‑like distributions.
   
-### common.ipynb  
-Contains common utilities and helper functions used acro_ss the notebooks.  
+## common.ipynb  
+Utility functions and helpers shared across notebooks.  
   
-### entropy.ipynb  
-Explore the concept of entropy, its properties, and how it can be calculated for different distributions.  
+## entropy.ipynb  
+Introduces entropy as a measure of uncertainty in a probability distribution. The notebook computes entropy for geometric, uniform, and Zipf‑like distributions, illustrating how uncertainty changes with the shape of the probability mass.
    
-### gradient.ipynb  
-Explore the concept of gradient for scalar functions.
+## gradient.ipynb  
+Defines the gradient of a scalar function with respect to vector or matrix inputs. For vectors, the gradient is a vector of partial derivatives; for matrices, it is a matrix of the same shape.
+The differential 𝑑𝑓 is introduced as the linear approximation of the function’s change, expressed as the inner product between the gradient and the perturbation.
   
-### inner_product.ipynb  
-Explore the concept of inner product for vectors and matrices, and its properties.
+## inner_product.ipynb  
+Introduces the inner product for vectors and generalizes it to matrices via the Frobenius inner product. The notebook also explains why transposition appears naturally in gradient formulas: the inner‑product structure forces gradients to align with the adjoint (transpose) of the corresponding linear map.
   
-### linear.ipynb  
-Explore the concept of linear function with its backward method and linear module.
+## linear.ipynb  
+Presents the fundamental linear layer 𝑧=𝑥𝑊+𝑏. This affine transformation combines a linear map with a translation, preserving straight lines and parallelism while shifting decision boundaries. Linear layers form the backbone of neural networks across all architectures.
   
-### newton.ipynb  
-Demonstrate how to use Newton's method to find extrema of a single-variable/multivariate function using first and second derivatives.  
+## mse.ipynb  
+Mean squared error measures the average squared difference between predictions and targets. It penalizes large deviations strongly and corresponds to maximum‑likelihood estimation under Gaussian noise. The notebook implements MSE with a custom backward pass. 
+  
+## newton.ipynb  
+Newton’s method finds a minimum (or root) of a scalar function by taking a second‑order Taylor expansion around the current point and solving for where the linearized derivative becomes zero. 
+  
+$$ f(x) \approx f(x_n) + f'(x_n)(x - x_n) + \frac{1}{2}f''(x_n)(x - x_n)^2 $$
+  
+For one-dimensional version it iteratively updates the guess using the formula:  
+  
+$$ x_{n+1} = x_n - \frac{f'(x_n)}{f''(x_n)} $$
     
-### neuron.ipynb  
-Demonstrate how to implement a McCulloch-Pitts neuron using a `Linear` to the affine transform, a `Sign` activation for binary classification. Demonstrate how to use it for boolean logic operations.  
-  
-### per_lin_sig_bce.ipynb  
-Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Sigmoid` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients.
-    
-### per_lin_tanh_bce.ipynb  
-Demonstrate how to implement a perceptron using a `Linear` to the affine transform, a `Tanh` activation for binary classification, and a `BinaryCrossEntropy` loss for training. Present three variants, high-level full PyTorch implementation using build-in autograd, a mid-level version with custom `autograd.Function`, and a fully manual implementation using hand-derived analytical gradients. Compare learning performance of the `Tanh` activation with the `Sigmoid` activation.
-  
-### ploss.ipynb  
-Demonstrate how to implement the `PLoss` loss function with a custom autograd backward function.
+In multiple dimensions, the first derivative generalizes to the gradient, and the second derivative generalizes to the Hessian matrix. The update becomes:
 
-### probability.ipynb  
+$$\mathbf{x}_{n+1} = \mathbf{x}_n - H^{-1} \nabla f(\mathbf{x}_n)$$
+  
+This method converges quadratically near a local minimum, making it very efficient when the function is well‑behaved and the initial guess is close to the solution. In this notebook, we will implement Newton's method for finding minima of scalar functions.  
+  
+## neuron.ipynb  
+Describes the McCulloch–Pitts neuron (1943), a logical threshold unit using a hard step activation. It implements Boolean functions but cannot learn XOR due to linear inseparability.
+  
+## per_lin_mse.ipynb  
+Implements a linear perceptron trained with mean squared error — historically known as ADALINE (ADAptive LInear NEuron), introduced by Widrow and Hoff in 1960. ADALINE was a major milestone in the development of artificial intelligence: the first model to use a continuous output and to update its weights using a true gradient of a differentiable loss function, decades before backpropagation was formalized.
+    
+## per_lin_ploss.ipynb  
+Implements Rosenblatt’s perceptron — the first trainable artificial neuron. Learning is performed via the perceptron update rule, equivalent to a subgradient step on the perceptron loss.
+  
+## per_lin_sig_bce.ipynb  
+Implements a perceptron using `Linear → Sigmoid → BCE`. Three variants are shown: full PyTorch autograd, custom autograd.Function, and fully manual gradients.
+  
+## per_lin_tanh_bce.ipynb  
+Implements `Linear → Tanh → BCE` with the same three levels of abstraction. The notebook compares learning performance of _tanh_ vs. _sigmoid_.
+  
+## ploss.ipynb  
+Describes perceptron loss — a piecewise‑linear loss used with a hard sign activation. Historically important as it matches Rosenblatt’s original 1957 learning rule. The notebook implements a custom backward pass.
+  
+## probability.ipynb  
 Demonstrate how to calculate probabilities and conditional probabilities.  
   
-### sigmoid.ipynb  
-Explore the sigmoid function, its properties, and implement its overflow resistant version.  
+## relu.ipynb  
+Rectified Linear Unit (ReLU) is a piecewise‑linear activation that preserves positive values and zeroes out negatives. Its non‑saturating gradient was a major breakthrough enabling deep networks to train effectively.
   
-### sign.ipynb  
-Implement the sign function, with its custom autograd backward function in PyTorch.
-
-### tanh.ipynb  
-Explore the hyperbolic tangent function, its properties, and implement its overflow resistant version.  
-    
+## sigmoid.ipynb  
+Sigmoid maps real inputs to (0, 1). Historically important but prone to saturation and vanishing gradients. The notebook implements _sigmoid_ with a custom backward pass.
+  
+## sign.ipynb 
+The sign function maps inputs to {−1, 0, +1}. It descends from the McCulloch–Pitts threshold unit and blocks gradient flow, making it incompatible with standard backpropagation. The notebook implements a custom backward function.
+  
+## tanh.ipynb  
+Tanh maps inputs to (−1,+1). Its derivative `1−tanh^2(x)` is twice as large as the _sigmoid_ derivative around zero, giving stronger gradients and typically faster convergence. The notebook implements tanh with a custom backward pass.
