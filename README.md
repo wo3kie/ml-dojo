@@ -47,6 +47,9 @@ Binary cross‑entropy measures the divergence between a predicted probability �
 ## common.ipynb  
 Utility functions and helpers shared across notebooks.  
   
+## cross_entropy.ipynb  
+Cross‑entropy generalizes binary cross‑entropy to multi‑class classification. It measures the divergence between a predicted probability distribution 𝑝 and a true one‑hot label 𝑡.
+  
 ## entropy.ipynb  
 Introduces entropy as a measure of uncertainty in a probability distribution. The notebook computes entropy for geometric, uniform, and Zipf‑like distributions, illustrating how uncertainty changes with the shape of the probability mass.
    
