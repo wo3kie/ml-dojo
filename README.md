@@ -62,6 +62,37 @@ Binary cross‑entropy is a loss function used for binary classification. It mea
 ## common.ipynb  
 Utility functions and helpers shared across notebooks.  
   
+## differential.ipynb  
+This dojo builds a clear, incremental pathway through differentials, gradients, and Jacobians for a wide variety of function types. Each case includes the differential formula, the appropriate derivative object, and a numerical example with finite‑difference verification. The goal is to show how the same idea — the differential as a linear approximation — manifests across scalar, vector, and matrix domains.  
+
+1. $\mathbb{R} \to \mathbb{R}$ — scalar derivative.  
+We begin with the simplest setting: a real function of one real variable.
+The differential reduces to the familiar form $df = f'(x)\,dx$. This serves as the conceptual foundation for all later generalizations.
+
+2. $\mathbb{R}^n \to \mathbb{R}$ — gradient.  
+For multivariate scalar functions, the derivative becomes the gradient vector.
+The differential is the inner product between the gradient and the perturbation: $df = (\nabla f(\mathbf{x}))^\top d\mathbf{x}$. This introduces the idea that the gradient is the unique vector representing the linear approximation.
+
+3. $\mathbb{R} \to \mathbb{R}^n$ — simple Jacobian.  
+A scalar input and vector output produce a column‑vector Jacobian.
+This is the first example where the derivative is no longer a scalar but a linear map between spaces of different dimensions.
+
+4. $\mathbb{R}^n \to \mathbb{R}^n$ — full Jacobian matrix.  
+For vector‑valued functions of vector inputs, the derivative becomes an $n \times n$ Jacobian matrix. Each row corresponds to the gradient of one output component. This case generalizes the idea of directional sensitivity across multiple outputs.
+
+5. $\mathbb{R}^n \to \mathbb{R}^n$ (element‑wise) — diagonal Jacobian. .
+For element‑wise functions, the Jacobian becomes diagonal. Each output depends only on its corresponding input coordinate, so cross‑derivatives vanish. This case highlights how structure in the function produces structure in the Jacobian.
+
+6. $\mathbb{R} \times \mathbb{R} \to \mathbb{R}$ — two partial derivatives.  
+For functions of two scalar variables, the differential splits into two components: $df = f_{x_1}\,dx_1 + f_{x_2}\,dx_2$. This is the first example of a differential with multiple independent perturbations.
+
+7. $\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}$ — two gradients.  
+For scalar functions of two vector arguments, the differential becomes the sum of two inner products: $df = (\nabla_{\mathbf{x}} f)^\top d\mathbf{x} + (\nabla_{\mathbf{y}} f)^\top d\mathbf{y}$.  This generalizes the idea of partial derivatives to vector‑valued inputs.
+
+8. $\mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R}$ — matrix derivatives.  
+For matrix‑valued inputs, the derivative is expressed using Frobenius inner products. This case shows how matrix calculus fits naturally into the same differential framework.
+
+
 ## entropy.ipynb  
 Entropy quantifies uncertainty: how many bits do we need on average to describe a random variable. The notebook builds intuition for the classic formula:
 
