@@ -191,4 +191,4 @@ It descends from the McCulloch–Pitts threshold unit, and as a completely non-l
 The notebook implements the sign function together with a custom backward pass.
   
 ## tanh.ipynb  
-Tanh maps inputs to $(−1.0, \, +1.0)$. Its derivative $1−\tanh^2(x)$ is twice as large as the _sigmoid_ derivative around zero, giving stronger gradients and typically faster convergence. The notebook implements tanh with a custom backward pass.
+Tanh maps inputs to $(−1.0, +1.0)$. Its derivative $1−\tanh^2(x)$ is twice as large as the _sigmoid_ derivative around zero, giving stronger gradients and typically faster convergence. The notebook implements tanh with a custom backward pass.
