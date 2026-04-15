@@ -130,7 +130,7 @@ $$ \langle A, B \rangle =
 \begin{dcases}
 \sum_{i} A_i B_i \quad &\text{for } A, B \in \mathbb{R}^n \\
 \\
-\sum_{i,j} A_{ij} B_{ij} = \text{tr}(AB^T) \quad &\text{for } A, B \in \mathbb{R}^{m \times n}
+\sum_{i,j} A_{ij} B_{ij} = \text{tr}(AB^\top) \quad &\text{for } A, B \in \mathbb{R}^{m \times n}
 \end{dcases}
 $$
 
