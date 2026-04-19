@@ -53,11 +53,11 @@ $$ df = Df(x) \, dx $$
 which specializes to:
 
 $$ df =
-\begin{dcases}
+\begin{cases}
     f'(x)dx \quad &\text{for } f:\mathbb{R}\to\mathbb{R} \\
     \nabla f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R} \\
     J_f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R}^m
-\end{dcases}
+\end{cases}
 $$
   
 In practical machine learning, backpropagation operates exactly on these Fréchet differentials, expressed in coordinates as gradients and Jacobians.
@@ -94,11 +94,11 @@ For matrix‑valued inputs, the derivative is expressed using Frobenius inner pr
 Introduces the inner product for vectors and generalizes it to matrices via the Frobenius inner product.
 
 $$ \langle A, B \rangle = 
-\begin{dcases}
+\begin{cases}
 \sum_{i} A_i B_i \quad &\text{for } A, B \in \mathbb{R}^n \\
 \\
 \sum_{i,j} A_{ij} B_{ij} = \text{tr}(AB^\top) \quad &\text{for } A, B \in \mathbb{R}^{m \times n}
-\end{dcases}
+\end{cases}
 $$
 
 The notebook also explains why transposition appears naturally in gradient formulas: the inner‑product structure forces gradients to align with the adjoint (transpose) of the corresponding linear map.
