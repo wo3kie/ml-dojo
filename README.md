@@ -96,7 +96,6 @@ Introduces the inner product for vectors and generalizes it to matrices via the 
 $$ \langle A, B \rangle = 
 \begin{cases}
 \sum_{i} A_i B_i \quad &\text{for } A, B \in \mathbb{R}^n \\
-\\
 \sum_{i,j} A_{ij} B_{ij} = \text{tr}(AB^\top) \quad &\text{for } A, B \in \mathbb{R}^{m \times n}
 \end{cases}
 $$
