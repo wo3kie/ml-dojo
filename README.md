@@ -37,25 +37,7 @@ Implement an `approx` utility for approximate equality comparison of floating-po
 assert 1.05 == approx(1.0, atol=0.1)
 assert 1.05 == approx(1.0, rtol=0.1)
 ```
-
-## backward.ipynb  
-The `backward` methods are the core mechanism behind PyTorch autograd system. A custom backward pass receives the gradient from above and must return gradients with respect to each input.
-  
-```engine=python
-class Mul2Function(autograd.Function):
-    @staticmethod
-    def forward(ctx, x):
-        return 2 * x
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        dF_df = grad_output   # upstream gradient
-        df_dx = 2             # local derivative
-        return (dF_df * df_dx,)
-```
-  
-This notebook implements custom backward functions for a sequence of increasingly complex operations, illustrating how gradient flow is constructed from local derivatives.
-  
+    
 ## bce.ipynb  
 Binary cross‑entropy is a loss function used for binary classification. It measures the divergence between a predicted probability 𝑝 and a true binary label 𝑡 ∈ {0, 1}, penalizing confident but incorrect predictions. The notebook derives BCE from first principles and implements it with a custom autograd backward function.
     
@@ -63,6 +45,22 @@ Binary cross‑entropy is a loss function used for binary classification. It mea
 Utility functions and helpers shared across notebooks.  
   
 ## differential.ipynb  
+For any function $f:X \to Y$, between normed vector spaces, the Fréchet derivative $Df(x)$ is the unique linear map satisfying:
+
+$$ f(x + h) = f(x) + Df(x) h + \epsilon \implies$$
+$$ df = Df(x) \, dx $$
+
+which specializes to:
+
+$$ df =
+\begin{dcases}
+    f'(x)dx \quad &\text{for } f:\mathbb{R}\to\mathbb{R} \\
+    \nabla f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R} \\
+    J_f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R}^m
+\end{dcases}
+$$
+  
+In practical machine learning, backpropagation operates exactly on these Fréchet differentials, expressed in coordinates as gradients and Jacobians.
 This dojo builds a clear, incremental pathway through differentials, gradients, and Jacobians for a wide variety of function types. Each case includes the differential formula, the appropriate derivative object, and a numerical example with finite‑difference verification. The goal is to show how the same idea — the differential as a linear approximation — manifests across scalar, vector, and matrix domains.  
 
 1. $\mathbb{R} \to \mathbb{R}$ — scalar derivative.  
@@ -81,7 +79,7 @@ This is the first example where the derivative is no longer a scalar but a linea
 For vector‑valued functions of vector inputs, the derivative becomes an $n \times n$ Jacobian matrix. Each row corresponds to the gradient of one output component. This case generalizes the idea of directional sensitivity across multiple outputs.
 
 5. $\mathbb{R}^n \to \mathbb{R}^n$ (element‑wise) — diagonal Jacobian. .
-For element‑wise functions, the Jacobian becomes diagonal. Each output depends only on its corresponding input coordinate, so cross‑derivatives vanish. This case highlights how structure in the function produces structure in the Jacobian.
+For element‑wise functions, the Jacobian becomes diagonal. Each output depends only on its corresponding input coordinate, so cross‑derivatives vanish.  
 
 6. $\mathbb{R} \times \mathbb{R} \to \mathbb{R}$ — two partial derivatives.  
 For functions of two scalar variables, the differential splits into two components: $df = f_{x_1}\,dx_1 + f_{x_2}\,dx_2$. This is the first example of a differential with multiple independent perturbations.
@@ -91,38 +89,14 @@ For scalar functions of two vector arguments, the differential becomes the sum o
 
 8. $\mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R}$ — matrix derivatives.  
 For matrix‑valued inputs, the derivative is expressed using Frobenius inner products. This case shows how matrix calculus fits naturally into the same differential framework.
-
-
+  
 ## entropy.ipynb  
 Entropy quantifies uncertainty: how many bits do we need on average to describe a random variable. The notebook builds intuition for the classic formula:
 
-$$ H(X) = \sum_{i} \Big\{ p_i \Big\}_{\text{how frequently}} \Big\{ \log_2 \frac{1}{p_i} \Big\}_{\text{how many bits}} $$
+$$ H(X) = \sum_{i} \Big\{ p_i \Big \}_{\text{how frequently}} \Big\{ \log_2 \frac{1}{p_i} \Big\} _{\text{how many bits}} $$
   
 It also demonstrates entropy examples for geometric, uniform, and Zipf‑like distributions, illustrating how uncertainty changes with the shape of the probability mass.
-   
-## differential.ipynb  
-The notebook introduces the concept of differentials as linear approximations to changes in a function’s output based on changes in its input.
-    
-For any function $f:X \to Y$, between normed vector spaces, the Fréchet derivative $Df(x)$ is the unique linear map satisfying:
-
-$$ f(x + h) = f(x) + Df(x) h + \epsilon \implies$$
-  
-$$ df = Df(x) dx $$
-
-which specializes to:
-
-$$ df =
-\begin{dcases}
-f'(x)dx \quad &\text{for } f:\mathbb{R}\to\mathbb{R} \\
-\\
-\nabla f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R} \\
-\\
-J_f(x) \cdot dx \quad &\text{for }f:\mathbb{R}^n\to\mathbb{R}^m
-\end{dcases}
-$$
-  
-In practical machine learning, backpropagation operates exactly on these Fréchet differentials, expressed in coordinates as gradients and Jacobians.
-  
+     
 ## inner_product.ipynb  
 Introduces the inner product for vectors and generalizes it to matrices via the Frobenius inner product.
 
@@ -175,10 +149,7 @@ Implements `Linear → Tanh → BCE` with the same three levels of abstraction. 
   
 ## ploss.ipynb  
 Describes perceptron loss — a piecewise‑linear loss used with a hard sign activation. Historically important as it matches Rosenblatt’s original 1957 learning rule. The notebook implements a custom backward pass.
-  
-## probability.ipynb  
-Demonstrate how to calculate probabilities and conditional probabilities.  
-  
+    
 ## relu.ipynb  
 Rectified Linear Unit (ReLU) is a piecewise‑linear activation that preserves positive values and zeroes out negatives. Its non‑saturating gradient was a major breakthrough enabling deep networks to train effectively.
   
