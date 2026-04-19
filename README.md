@@ -89,14 +89,7 @@ For scalar functions of two vector arguments, the differential becomes the sum o
 
 8. $\mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R}$ — matrix derivatives.  
 For matrix‑valued inputs, the derivative is expressed using Frobenius inner products. This case shows how matrix calculus fits naturally into the same differential framework.
-  
-## entropy.ipynb  
-Entropy quantifies uncertainty: how many bits do we need on average to describe a random variable. The notebook builds intuition for the classic formula:
-
-$$ H(X) = \sum_{i} \Big\{ p_i \Big \}_{\text{how frequently}} \Big\{ \log_2 \frac{1}{p_i} \Big\} _{\text{how many bits}} $$
-  
-It also demonstrates entropy examples for geometric, uniform, and Zipf‑like distributions, illustrating how uncertainty changes with the shape of the probability mass.
-     
+       
 ## inner_product.ipynb  
 Introduces the inner product for vectors and generalizes it to matrices via the Frobenius inner product.
 
