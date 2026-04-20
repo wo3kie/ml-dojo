@@ -31,7 +31,7 @@ Open any of the notebooks listed above in the browser.
 ## Perceptrons
 
 ### neuron.ipynb  
-Describes the McCulloch–Pitts neuron, the first mathematical model of a neuron (1943). It consists of a linear combination of inputs ollowed by a hard step sign activation. The model was designed purely for computation, with no learning capability. By manually choosing weights and biases, it can implement Boolean functions such as `and` and `or`, but it cannot represent `xor` due to linear inseparability.
+Describes the McCulloch–Pitts neuron, the first mathematical model of a neuron (1943). It consists of a linear combination of inputs followed by a hard step sign activation. The model was designed purely for computation, with no learning capability. By manually choosing weights and biases, it can implement Boolean functions such as `and` and `or`, but it cannot represent `xor` due to linear inseparability.
   
 ### per_lin_mse.ipynb  
 Implements a linear perceptron trained with mean squared error — historically known as ADALINE (ADAptive LInear NEuron), introduced by Widrow and Hoff in 1960.
@@ -83,7 +83,7 @@ Tanh maps inputs to $(−1.0, +1.0)$. Its derivative $1−\tanh^2(x)$ is twice a
 For any function $f:X \to Y$, between normed vector spaces, the Fréchet derivative $Df(x)$ is the unique linear map satisfying:
 
 $$ f(x + h) = f(x) + Df(x) h + \epsilon \implies$$
-$$ df = Df(x) \, dx $$
+$$ df = Df(x) dx $$
 
 which specializes to:
 
@@ -100,7 +100,7 @@ This dojo builds a clear, incremental pathway through differentials, gradients, 
 
 1. $\mathbb{R} \to \mathbb{R}$ — scalar derivative.  
 We begin with the simplest setting: a real function of one real variable.
-The differential reduces to the familiar form $df = f'(x)\,dx$. This serves as the conceptual foundation for all later generalizations.
+The differential reduces to the familiar form $df = f'(x)dx$. This serves as the conceptual foundation for all later generalizations.
 
 2. $\mathbb{R}^n \to \mathbb{R}$ — gradient.  
 For multivariate scalar functions, the derivative becomes the gradient vector.
@@ -117,7 +117,7 @@ For vector‑valued functions of vector inputs, the derivative becomes an $n \ti
 For element‑wise functions, the Jacobian becomes diagonal. Each output depends only on its corresponding input coordinate, so cross‑derivatives vanish.  
 
 6. $\mathbb{R} \times \mathbb{R} \to \mathbb{R}$ — two partial derivatives.  
-For functions of two scalar variables, the differential splits into two components: $df = f_{x_1}\,dx_1 + f_{x_2}\,dx_2$. This is the first example of a differential with multiple independent perturbations.
+For functions of two scalar variables, the differential splits into two components: $df = f_{x_1} dx_1 + f_{x_2} dx_2$. This is the first example of a differential with multiple independent perturbations.
 
 7. $\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}$ — two gradients.  
 For scalar functions of two vector arguments, the differential becomes the sum of two inner products: $df = (\nabla_{\mathbf{x}} f)^\top d\mathbf{x} + (\nabla_{\mathbf{y}} f)^\top d\mathbf{y}$.  This generalizes the idea of partial derivatives to vector‑valued inputs.
