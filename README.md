@@ -46,6 +46,9 @@ Implements a perceptron using `Linear → Sigmoid → BCE`. Three variants are s
 ### per_lin_tanh_bce.ipynb  
 Implements `Linear → Tanh → BCE` with the same three levels of abstraction. The notebook compares learning performance of _tanh_ vs. _sigmoid_.
   
+### per_lin_softmax_ce.ipynb  
+Implements `Linear → Softmax → CE` for multi-class classification. The notebook derives the softmax and cross-entropy gradients from first principles, showing how the Jacobian of the softmax leads to the familiar CE gradient formula.  
+  
 ## Functions
 
 ### bce.ipynb  
