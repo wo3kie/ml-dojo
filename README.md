@@ -49,6 +49,9 @@ Implements `Linear → Tanh → BCE` with the same three levels of abstraction. 
 ### per_lin_softmax_ce.ipynb  
 Implements `Linear → Softmax → CE` for multi-class classification. The notebook derives the softmax and cross-entropy gradients from first principles, showing how the Jacobian of the softmax leads to the familiar CE gradient formula.  
   
+### per_lin_relu_lin_softmax_ce.ipynb  
+Implements a two-layer perceptron with a hidden ReLU nonlinearity, trained with softmax cross-entropy. The notebook shows how the ReLU nonlinearity enables learning of the XOR function, which is impossible with a single linear layer. It also compares learning performance of this architecture against a linear softmax model on the XOR task, demonstrating the critical role of nonlinearity in enabling complex decision boundaries.
+  
 ## Functions
 
 ### bce.ipynb  
