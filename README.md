@@ -28,8 +28,13 @@ pip install -r requirements.txt
   
 Open any of the notebooks listed above in the browser.  
   
+## Content
+  
+### mnist.ipynb  
+Demonstrates how to load the MNIST dataset using `torchvision`, preprocess it, and visualize some samples. This notebook serves as a final, testing ground for the perceptrons introduced in this collection.
+  
 ## Perceptrons
-
+  
 ### neuron.ipynb  
 Describes the McCulloch–Pitts neuron, the first mathematical model of a neuron (1943). It consists of a linear combination of inputs followed by a hard step sign activation. The model was designed purely for computation, with no learning capability. By manually choosing weights and biases, it can implement Boolean functions such as `and` and `or`, but it cannot represent `xor` due to linear inseparability.
   
