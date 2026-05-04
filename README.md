@@ -35,6 +35,8 @@ Demonstrates how to load the MNIST dataset using `torchvision`, preprocess it, a
   
 ## Perceptrons
   
+Several perceptron architectures are explored in order of increasing complexity — from a non-trainable baseline, through a linear model, up to architectures with nonlinear activations. Each is presented at three levels of abstraction: full PyTorch autograd; custom `autograd.Function` with manually defined forward and backward passes for each component, while overall backpropagation is still delegated to PyTorch; and a fully manual gradient implementation with no autograd involvement. 
+
 ### neuron.ipynb  
 Describes the McCulloch–Pitts neuron, the first mathematical model of a neuron (1943). It consists of a linear combination of inputs followed by a hard step sign activation. The model was designed purely for computation, with no learning capability. By manually choosing weights and biases, it can implement Boolean functions such as `and` and `or`, but it cannot represent `xor` due to linear inseparability.
   
@@ -52,10 +54,10 @@ Implements a perceptron using `Linear → Sigmoid → BCE`. Three variants are s
 Implements `Linear → Tanh → BCE` with the same three levels of abstraction. The notebook compares learning performance of _tanh_ vs. _sigmoid_.
   
 ### per_lin_softmax_ce.ipynb  
-Implements `Linear → Softmax → CE` for multi-class classification. The notebook derives the softmax and cross-entropy gradients from first principles, showing how the Jacobian of the softmax leads to the familiar CE gradient formula.  
+Implements `Linear → Softmax → CE` for multi-class classification. The notebook derives the softmax and cross-entropy gradients from first principles, showing how the Jacobian of the softmax leads to the familiar CE gradient formula. It is used for MNIST classification in the final notebook, achieving around 91% accuracy.
   
 ### per_lin_relu_lin_softmax_ce.ipynb  
-Implements a two-layer perceptron with a hidden ReLU nonlinearity, trained with softmax cross-entropy. The notebook shows how the ReLU nonlinearity enables learning of the XOR function, which is impossible with a single linear layer. It also compares learning performance of this architecture against a linear softmax model on the XOR task, demonstrating the critical role of nonlinearity in enabling complex decision boundaries.
+Implements a two-layer perceptron with a hidden ReLU nonlinearity, trained with softmax cross-entropy. The notebook shows how the ReLU nonlinearity enables learning of the XOR function, which is impossible with a single linear layer. It also used for MNIST classification in the final notebook to jump far above 91% accuracy.
   
 ## Functions
 
